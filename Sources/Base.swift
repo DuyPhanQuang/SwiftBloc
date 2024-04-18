@@ -24,6 +24,7 @@ open class Base<State>: ObservableObject where State: Equatable {
      Will return a shared instance of **BlocObserver** which will notify about changes and transitions of states
      You may create a custom observer of **BlocObserver**
      */
+    // Fix leak memory bug
     var observer: BlocObserver {
         BlocObserver.shared
     }
